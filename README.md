@@ -2,7 +2,7 @@
 
 # Simple WebApp with Node.js, Express, Sequelize, and PostgreSQL
 
-Simple web application. The application sets up a database table for users with an initial balance and includes a route to update the user's balance, ensuring that the balance does not go negative.
+Simple web application.
 
 ## Prerequisites
 
@@ -14,8 +14,8 @@ Simple web application. The application sets up a database table for users with 
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/your-repo/simple-webapp.git
-    cd simple-webapp
+    git clone https://github.com/i-plc-rus/myapp.git
+    cd myapp
     ```
 
 2. **Install dependencies:**
@@ -42,21 +42,15 @@ Simple web application. The application sets up a database table for users with 
 
 ## Running the Application
 
-1. **Start the server in prod:**
-
-    ```sh
-    npm start
-    ```
-
-    By default, the server will run on `http://localhost:3000`.
-
-2. **Dev environment:**
+1. **Dev environment:**
 
     To run the server in the test environment, use:
 
     ```sh
     npm run start:dev
     ```
+
+    By default, the server will run on `http://localhost:3000`.
 
 ## Routes
 
@@ -68,8 +62,8 @@ Simple web application. The application sets up a database table for users with 
 
 **Request Body:**
 
-- `userId` (integer): The ID of the user whose balance is to be updated.
-- `amount` (integer): The amount to add or subtract from the user's balance. Positive values increase the balance, and negative values decrease it.
+- `userId` (integer): userId.
+- `amount` (integer): amount.
 
 **Example Request:**
 
@@ -116,25 +110,13 @@ curl -X POST http://localhost:3000/update-balance \
 ### Project Structure
 
 - **controllers/**
-  - `userController.js`: Handles the logic for updating user balance.
+  - `userController.js`: logic.
 - **middlewares/**
-  - `validation.js`: Contains validation middleware for request body.
+  - `validation.js`: Validation.
 - **migrations/**
-  - `20230709000000-create-user.js`: Migration file to create the users table.
+  - `20230709000000-create-user.js`: Migration file.
 - **models/**
-  - `index.js`: Sequelize setup and model definition.
+  - `index.js`: Model definition.
 - **services/**
   - `userService.js`: Business logic for updating user balance.
 - **index.js**: Entry point of the application.
-
-### Scripts
-
-- **Start the application:**
-
-    ```sh
-    npm start
-    ```
-
----
-
-This README provides all necessary information to set up, run, and use the application. Ensure to replace placeholder values in the `.env` files with actual database credentials before running the application.
