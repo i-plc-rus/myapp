@@ -1,8 +1,8 @@
 ### README.md
 
-# Simple WebApp with Node.js, Express, Sequelize, and PostgreSQL
+# Simple MyApp
 
-Simple web application.
+Simple application. Demo change balance user
 
 ## Prerequisites
 

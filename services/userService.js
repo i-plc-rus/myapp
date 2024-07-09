@@ -5,7 +5,7 @@ async function updateUserBalance(userId, amount) {
   if (!user) throw new Error('User not found');
 
   const newBalance = user.balance + amount;
-  if (newBalance < 0) throw new Error('Insufficient balance');
+  if (newBalance < 0) throw new Error('Negative balance');
 
   await user.update({ balance: newBalance });
   return user;
