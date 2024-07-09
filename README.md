@@ -110,13 +110,13 @@ curl -X POST http://localhost:3000/update-balance \
 ### Project Structure
 
 - **controllers/**
-  - `userController.js`: logic.
+  - `userController.js`: Handles the logic.
 - **middlewares/**
   - `validation.js`: Validation.
 - **migrations/**
   - `20230709000000-create-user.js`: Migration file.
 - **models/**
-  - `index.js`: Model definition.
+  - `index.js`: Sequelize setup and model definition.
 - **services/**
   - `userService.js`: Business logic for updating user balance.
-- **index.js**: Entry point of the application.
+- **index.js**: Entry point
