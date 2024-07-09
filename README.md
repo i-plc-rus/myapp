@@ -93,7 +93,7 @@ curl -X POST http://localhost:3000/update-balance \
 
     ```json
     {
-      "error": "Insufficient balance"
+      "error": "Negative balance"
     }
     ```
 
